@@ -48,7 +48,7 @@ Deployed a Windows configuration profile using Intune’s Settings Catalog to en
 ---
 
 ### 3. Created a Device Compliance Policy
-Created a Windows device compliance policy in Microsoft Intune to enforce security standards required for device trust. Configured requirements including BitLocker encryption, Firewall, Antivirus, Antispyware, Microsoft Defender Antimalware, and real-time protection. Assigned the policy to the group and validated compliance by confirming the enrolled device reported as Compliant, preparing it for Conditional Access
+Created a Windows device compliance policy in Microsoft Intune to enforce security standards required for device trust. Configured requirements including `BitLocker encryption`, `Firewall`, `Antivirus`, `Antispyware`, `Microsoft Defender Antimalware`, and `real-time protection`. Assigned the policy to the group and validated compliance by confirming the enrolled device reported as Compliant, preparing it for Conditional Access
 
 ![Screenshot 7](Screenshots/7-compliance-settings.png)
 
