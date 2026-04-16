@@ -89,7 +89,7 @@ Intentionally disabled BitLocker encryption on the device to simulate a noncompl
 ---
 
 ### 5. Remediated Device Compliance and Restored Access
-Re-enabled the required endpoint security setting, initiated policy synchronization, and verified the device returned to a compliant state. Retested Microsoft 365 access and confirmed Conditional Access allowed the user back into protected resources.
+Re-enabled the required endpoint security setting, `BitLocker`, initiated policy synchronization, and verified the device returned to a compliant state. Retested Microsoft 365 access and confirmed Conditional Access allowed the user back into protected resources.
 
 ![Screenshot 18](Screenshots/18-bitlocker-enabled.png)
 
