@@ -1,14 +1,25 @@
 # Microsoft Intune Device Compliance & Conditional Access Troubleshooting Lab
 
-## Scenario
-A user can sign into Microsoft 365, but the organization wants access allowed only from compliant managed Windows devices. After the device is enrolled and secured, a compliance failure is introduced. Conditional Access should then block access until the device is remediated.
+## Objective
+Simulate and troubleshoot a real-world Microsoft Intune access control issue by enrolling a Windows 11 device, applying configuration and compliance policies, enforcing Conditional Access based on device compliance, intentionally causing a compliance failure, and restoring access through remediation.
 
 ---
 
 ## Lab Environment 
+- Microsoft 365 Tenant
 - Microsoft Intune admin center
 - Microsoft Entra admin center
 - Windows 11 Virtual Machine
+
+---
+
+## Skills Demonstrated
+- Microsoft Intune device enrollment
+- Windows configuration profile deployment
+- Device compliance policy creation
+- Conditional Access administration
+- Access control troubleshooting
+- Endpoint remediation
 
 ---
 
@@ -63,12 +74,19 @@ Performed test sign-ins using the enrolled user account and reviewed sign-in log
 ---
 
 ### 4. Simulated a Noncompliant Device Condition
-Intentionally modified the device by disabling BitLocker encryption to simulate a non-compliant endpoint. After forcing a device sync, the device was marked as Noncompliant in Microsoft Intune due to failing the BitLocker requirement defined in the compliance policy created. Verified non-compliance at the policy level, confirming BitLocker as the root cause. Attempted to access Microsoft 365 resources, where Conditional Access enforcement blocked access and required the device to meet compliance requirements.
+Intentionally disabled BitLocker encryption on the device to simulate a noncompliant endpoint. After forcing a device sync, the device was marked as `Noncompliant` in Microsoft Intune due to failing the BitLocker requirement defined in the compliance policy. Verified the noncompliant state in both Intune and Microsoft Entra ID, confirming BitLocker as the root cause at the policy setting level. Attempted to access Microsoft 365 resources, where Conditional Access enforcement successfully blocked access, requiring the device to meet compliance requirements before access was granted.
 
-![Screenshot 13](Screenshots/13-device-noncompliant.png)
+![Screenshot 13](Screenshots/13-intune-device-noncompliant.png)
 
-![Screenshot 14](Screenshots/14-windows-security-compliance-noncompliant.png)
+![Screenshot 14](Screenshots/14-entra-noncompliant.png)
 
-![Screenshot 15](Screenshots/15-policy-settings-status.png)
+![Screenshot 15](Screenshots/15-windows-security-compliance-noncompliant.png)
 
-![Screenshot 16](Screenshots/16-access-blocked-screen.png)
+![Screenshot 16](Screenshots/16-policy-settings-status.png)
+
+![Screenshot 17](Screenshots/17-access-blocked-screen.png)
+
+---
+
+### 5. Remediated Device Compliance and Restored Access
+
